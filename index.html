@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Sister 💖</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ffb6c1, #d8b4fe);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      max-width: 320px;
+    }
+
+    h1 {
+      color: #e11d48;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #444;
+      min-height: 60px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 16px;
+      background: #ec4899;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>For My Chelle 💝</h1>
+    <p id="message">You are the best sister in the world 💖</p>
+    <button onclick="nextMessage()">Tap Me 💕</button>
+  </div>
+
+  <script>
+    const messages = [
+      "You are the best sister in the world 💖",
+      "Thank you for always supporting me 🌸",
+      "Your smile makes my day brighter 😊",
+      "I’m lucky to have you as my sister 💕",
+      "You are loved more than you know 🌈"
+    ];
+
+    let index = 0;
+
+    function nextMessage() {
+      index = (index + 1) % messages.length;
+      document.getElementById("message").innerText = messages[index];
+    }
+  </script>
+
+</body>
+</html>
